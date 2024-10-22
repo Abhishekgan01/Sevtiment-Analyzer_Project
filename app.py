@@ -8,7 +8,7 @@ import csv
 from io import StringIO
 
 # MongoDB connection setup
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb+srv://abhishekganesh2002:1234@abhishek.bzqgvfv.mongodb.net/")
 db = client["feedback_db"]
 feedback_collection = db["feedback"]
 
