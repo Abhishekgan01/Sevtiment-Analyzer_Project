@@ -9,11 +9,10 @@ from io import StringIO
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file (for local development)
-load_dotenv()
+
 
 # MongoDB connection setup
-client = MongoClient(os.getenv("MONGODB_URI"))
+client = MongoClient(os.getenv("MONGO_URI"))
 db = client["feedback_db"]
 feedback_collection = db["feedback"]
 
