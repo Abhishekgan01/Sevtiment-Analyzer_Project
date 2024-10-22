@@ -11,4 +11,4 @@ services:
       - key: MONGO_USER
         value: abhishekganesh2002
       - key: MONGO_PASS
-        value: 1234  # Consider removing this and setting it through Render's environment variables for security
+        value: 1234  # Consider managing sensitive info securely
