@@ -7,13 +7,13 @@ import pandas as pd
 import csv
 from io import StringIO
 import os
+from dotenv import load_dotenv
 
-# MongoDB connection setup using environment variables
-mongo_user = os.getenv("MONGO_USER")
-mongo_pass = os.getenv("MONGO_PASS")
-mongo_uri = f"mongodb+srv://{mongo_user}:{mongo_pass}@abhishek.bzqgvfv.mongodb.net/?retryWrites=true&w=majority&tls=true"
-client = MongoClient(mongo_uri)
+# Load environment variables from .env file (for local development)
+load_dotenv()
 
+# MongoDB connection setup
+client = MongoClient(os.getenv("MONGODB_URI"))
 db = client["feedback_db"]
 feedback_collection = db["feedback"]
 

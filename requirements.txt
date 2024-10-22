@@ -1,6 +1,6 @@
 streamlit
 pymongo
 textblob
-datetime
 matplotlib
 pandas
+python-dotenv
